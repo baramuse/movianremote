@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MovianRemote.Core.Pages.ConnectPage">
+	<ContentPage.Content>
+	<Grid>
+	  <Grid.RowDefinitions>
+	    <RowDefinition Height="*" />
+	    <RowDefinition Height="*" />
+	    <RowDefinition Height="*" />
+	  </Grid.RowDefinitions>
+	  <Grid.ColumnDefinitions>
+	    <ColumnDefinition Width="*" />
+	  </Grid.ColumnDefinitions>
+	  <Entry x:Name="hostEntry" Keyboard="Telephone" VerticalOptions="End" HorizontalOptions="Center" Grid.Row="0" Grid.Column="0" Text="{Binding IpEntryText}"/>
+	  <Button Text="Connect" VerticalOptions="Start" HorizontalOptions="CenterAndExpand" Grid.Row="1" Grid.Column="0" Command="{Binding ConnectCommand}"/>
+	  <ActivityIndicator Grid.Row="2" Grid.Column="0" IsRunning="{Binding ActivityIndicatorIsRunning}"/>
+	  </Grid>
+	</ContentPage.Content>
+</ContentPage>

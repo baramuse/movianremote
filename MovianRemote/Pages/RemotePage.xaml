@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MovianRemote.RemotePage">
+	<ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness"
+                    iOS="0, 20, 0, 0" />
+     </ContentPage.Padding>
+	<ContentPage.Content>
+	<Grid>
+	  <Grid.RowDefinitions>
+	    <RowDefinition Height="Auto" />
+	    <RowDefinition Height="*" />
+	    <RowDefinition Height="*" />
+	    <RowDefinition Height="*" />
+	    <RowDefinition Height="Auto" />
+	    <RowDefinition Height="Auto" />
+	  </Grid.RowDefinitions>
+	  <Grid.ColumnDefinitions>
+	    <ColumnDefinition Width="*" />
+	    <ColumnDefinition Width="*" />
+	    <ColumnDefinition Width="*" />
+	  </Grid.ColumnDefinitions>
+	  <Entry x:Name="hostEntry" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" Text="127.0.0.1"/>
+	  <Button Text="Info" Grid.Row="1" Grid.Column="0" Clicked="onCommandButtonClicked"/>
+	  <Button Text="Menu" Grid.Row="1" Grid.Column="2" Clicked="onCommandButtonClicked"/>
+	  <Button Text="ItemMenu" Grid.Row="4" Grid.Column="0" Clicked="onCommandButtonClicked"/>
+	  <Button Text="LogWindow" Grid.Row="4" Grid.Column="1" />
+	   <Button Text="MediaStats" Grid.Row="4" Grid.Column="2" />
+	   <Button Text="Select" Grid.Row="3" Grid.Column="2" Clicked="onCommandButtonClicked"/>
+	  <Button Text="UP" Grid.Row="1" Grid.Column="1" Clicked="onCommandButtonClicked"/>
+	  <Button Text="LEFT" Grid.Row="2" Grid.Column="0" Clicked="onCommandButtonClicked"/>
+	  <Button Text="DOWN" Grid.Row="3" Grid.Column="1" Clicked="onCommandButtonClicked"/>
+	  <Button Text="RIGHT" Grid.Row="2" Grid.Column="2" Clicked="onCommandButtonClicked"/>
+	  <Button Text="Ok" Grid.Row="2" Grid.Column="1" Clicked="onOkClicked"/>
+	  <Button Text="Back" Grid.Row="3" Grid.Column="0" Clicked="onCommandButtonClicked"/>
+	  <ProgressBar Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="3"/>
+	</Grid>
+	</ContentPage.Content>
+</ContentPage>
